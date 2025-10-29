@@ -1,55 +1,54 @@
+/*
+    Det används enkla rutnät (grid) för resultaten och flex för sökrutan.
+    Header är grön, texten är vit, resultaten visas som kort med lite skugga.
+*/
+
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f7ff;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4; /* Ljus bakgrund */
 }
 
 header {
-  background-color: #2b5797;
-  color: white;
-  padding: 15px;
+  background-color: #4CAF50; /* Grön bakgrund */
+  color: white;              /* Vit text */
+  text-align: center;
+  padding: 1rem;
 }
 
-main {
-  margin-top: 20px;
+/* Flex för sökfältet */
+#bookInput,
+#searchBtn {
+  padding: 0.5rem;
 }
 
-input {
-  padding: 8px;
-  font-size: 16px;
-}
-
-button {
-  padding: 8px 12px;
-  margin-left: 5px;
-  background-color: #ffb300;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #ff8f00;
-}
-
-#result {
-  margin-top: 20px;
-}
-
-.book-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  display: inline-block;
+#bookInput {
   width: 200px;
-  margin: 10px;
-  padding: 10px;
 }
 
+#searchBtn {
+  margin-left: 0.5rem;
+  cursor: pointer; /* Hand när man hovrar */
+}
+
+/* Resultat som visas i rutnät */
+#result {
+  display: grid; /* Rutnät för resultaten */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Anpassar bredd */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Kort för varje bok */
+.book-card {
+  background-color: white; /* Vit bakgrund på korten */
+  padding: 1rem;
+  border-radius: 8px;      /* Runda hörn */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Liten skugga */
+}
 .book-card img {
   width: 100px;
   height: 150px;
+  object-fit: cover;
 }
