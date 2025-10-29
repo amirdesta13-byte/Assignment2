@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f7ff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2b5797;
+  color: white;
+  padding: 15px;
+}
+
+main {
+  margin-top: 20px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #ffb300;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff8f00;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.book-card img {
+  width: 100px;
+  height: 150px;
+}
