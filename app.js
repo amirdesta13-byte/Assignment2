@@ -15,11 +15,11 @@ button.addEventListener('click', async () => {
   resultDiv.innerHTML = "<p>Laddar böcker...</p>";
 
   try {
-    // Hämta data från Open Library API
+    // Den hämtar data från Open Library API
     const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
     const data = await response.json();
 
-    // Om inga böcker hittades
+    // ifall inga böcker hittas i sök grejen
     if (data.docs.length === 0) {
       resultDiv.innerHTML = "<p>Inga böcker hittades 😢</p>";
       return;
